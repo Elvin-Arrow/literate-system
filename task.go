@@ -53,7 +53,7 @@ func main() {
 
 }
 
-// Function to read a CSV file given file path
+// Function to read a file given file path
 func readCSV(path string) [][]string {
 	csvFile, err := os.Open(path)
 	if err != nil {
