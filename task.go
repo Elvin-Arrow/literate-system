@@ -57,7 +57,7 @@ func main() {
 func readCSV(path string) [][]string {
 	csvFile, err := os.Open(path)
 	if err != nil {
-		fmt.Println(err)
+		panic(err.Error())
 	}
 
 	fmt.Println("Successfully Opened CSV file")
@@ -66,7 +66,7 @@ func readCSV(path string) [][]string {
 	// Read the file
 	csvLines, err := csv.NewReader(csvFile).ReadAll()
 	if err != nil {
-		fmt.Println(err)
+		panic(err.Error())
 	}
 
 	return csvLines
